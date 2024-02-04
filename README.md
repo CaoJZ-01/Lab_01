@@ -1,4 +1,4 @@
-# CSI5386: Natural Language Processing   Assignment 1: Corpus analysis and sentence embeddings
+# CSI5386: Natural Language Processing        Assignment 1: Corpus analysis and sentence embeddings
 
 ## Part1
 
