@@ -4,7 +4,7 @@
 ## Part1
 
 
-## Part2
+## Part2 Evaluation of pre-trained sentence embedding models
 To run the program, use this command:  
 ```  
 $ python main.py --SE  
@@ -15,6 +15,7 @@ UniversalSentenceEncoder
 Skipgram  
 NNLM  
 Vertex  
+  
 If you do not specify a model, the program will choose SBERT as default.  
 
 External resources are used for each model, and here is how to use them:  
