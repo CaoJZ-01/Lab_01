@@ -28,18 +28,21 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 ### 2. UniversalSentenceEncoder  
 We load a pre-trained Universal Sentence Encoder model on Kaggle in the program:  
 ```
+import tensorflow_hub as hub
 module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"  
 model = hub.load(module_url)  
 ```  
 ### 3. Skipgram 
 We load a pre-trained Skip-gram model on Kaggle in the program:  
 ```
+import tensorflow_hub as hub
 module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"  
 model = hub.load(module_url)  
 ```  
 ### 4. NNLM 
 We load a pre-trained NNLM model on Kaggle in the program:  
 ```
+import tensorflow_hub as hub
 module_url = "https://tfhub.dev/google/universal-sentence-encoder/4"  
 model = hub.load(module_url)  
 ```  
@@ -52,7 +55,11 @@ We use APIs provided by Google Vertex AI to get access to the pre-trained senten
 Ⅴ In sentencessimilarity.py, set the GOOGLE_APPLICATION_CREDENTIALS:  
 ```
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "YOUR_KEY_LOCATION"  
-```  
+```
+Now the sentence embedding model based on Vertex can be loaded:  
+```
+model = TextEmbeddingModel.from_pretrained("textembedding-gecko@001")
+```
 
 Please note that since the key is confidential and using Vertex AI API may cause fee, we do not include the key in the zip. Your own key is needed if you would like to choose Vertex as the sentence embedding model.
 
